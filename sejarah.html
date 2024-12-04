@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Nusantara</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #4A645F;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-section {
+      position: relative;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      top: 40%;
+      text-align: center;
+    }
+
+    .text-image {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .content {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: justify;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .content p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .map-section {
+      position: absolute;
+      top: 50%; /* Vertikal tengah */
+      transform: translateY(-50%); /* Agar elemen sejajar di tengah secara vertikal */
+      z-index: 10;
+    }
+
+    /* Map di sebelah kanan */
+    .content:nth-child(odd) .map-section {
+      right: -110px;
+    }
+
+    /* Map di sebelah kiri */
+    .content:nth-child(even) .map-section {
+      left: -110px;
+    }
+
+    .map-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer {
+      font-family: Arial, sans-serif;
+      background-color: #4A645F;
+      color: white;
+      padding: 20px 40px;
+    }
+
+    .footer-top {
+      border-bottom: 2px solid #333;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .footer-container {
+      display: flex;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-logo img {
+      max-width: 200px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .footer-links li:first-child {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 12px;
+      text-align: center;
+      margin-right: 990px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Website Nusantara</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#culture">Culture</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <img src="img/proklamasi.jpg" alt="Hero Image" class="hero-image">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <img src="img/sejarahindonesia.png" alt="Cari Tahu Budaya & Tradisi Indonesia" class="text-image">
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/pt.webp" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/perda.webp" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/kapal.jpg" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/rempah.jpg" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/Kapal-VOC.jpg" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.
+    </p>
+    <div class="map-section">
+      <div class="map-container">
+        <img src="img/kemerdekaan.jpg" alt="Map of Nusantara">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="Sarab Anusa">
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>ABOUT US</li>
+            <li>History</li>
+            <li>Partner</li>
+            <li>Articles</li>
+            <li>People</li>
+            <li>Career</li>
+          </ul>
+          <ul>
+            <li>CONTACT</li>
+            <li>021-324323</li>
+            <li>081 222 222 222</li>
+            <li>office@sarabanusa.com</li>
+            <li>www.sarab-anusa.gov.id</li>
+          </ul>
+          <ul>
+            <li>ADDRESS</li>
+            <li>Office:</li>
+            <li>Jl. Cipunggera 20, Surabaya</li>
+            <li>62323, Jawa Timur</li>
+            <li>Gallery:</li>
+            <li>Elysee Building, 2nd Floor</li>
+            <li>LOT 21, Jakarta - Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        © 2024 SARAB ANUSA. All Rights Reserved.
+      </div>
+    </div>
+</body>
+
+</html>
